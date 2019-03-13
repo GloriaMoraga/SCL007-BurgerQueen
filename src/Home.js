@@ -15,11 +15,17 @@ logout(){
 render(){
     return(
     <div className="col-ms-6">
+
+        <div className="Navbar">
         <h1>
             Bienvenidos a Burger Queen
-        </h1>
+        </h1> <button onClick={this.logout} >Salir</button>
+        </div>
+
+        <div className="cliente">
         <NameForm />
-        <button onClick={this.logout} >Salir</button>
+        </div>
+        
     </div>
     );
 }     
