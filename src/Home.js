@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import fire from './config/Fire';
+import NameForm from './Component/NameForm'
 
 class Home extends Component {
     constructor(props){
@@ -15,9 +16,10 @@ render(){
     return(
     <div className="col-ms-6">
         <h1>
-            You are Home
+            Bienvenidos a Burger Queen
         </h1>
-        <button onClick={this.logout} ></button>
+        <NameForm />
+        <button onClick={this.logout} >Salir</button>
     </div>
     );
 }     
