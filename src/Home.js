@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
+import { Container, Row, Col } from 'react-bootstrap';
 import fire from './config/Fire';
 import NameForm from './Component/NameForm'
+import Breakfast from './Component/Breakfast'
 
 class Home extends Component {
     constructor(props){
@@ -14,19 +16,33 @@ logout(){
 
 render(){
     return(
-    <div className="col-ms-6">
-
-        <div className="Navbar">
-        <h1>
-            Bienvenidos a Burger Queen
-        </h1> <button onClick={this.logout} >Salir</button>
-        </div>
-
-        <div className="cliente">
-        <NameForm />
-        </div>
+<Container fluid >
         
-    </div>
+     <NavBar>
+      <h1> Bienvenidos a Burger Queen</h1> 
+        <button onClick={this.logout} >Salir</button>
+      </NavBar>
+
+        <Container>
+         <Row>
+
+        
+   
+      
+         <NameForm />
+         
+
+         <Breakfast/>
+      
+       
+       
+        </Row>
+       </Container>
+  
+    
+  </Container>
+    
+    
     );
 }     
 

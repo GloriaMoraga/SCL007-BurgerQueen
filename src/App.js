@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './App.css';
 import fire from './config/Fire'
 import Login from './Login';
 import Home from './Home'
@@ -30,9 +29,10 @@ authListener(){
 
   render() {
     return (
-     <div>
+      <div>
+   
        {this.state.user ? (<Home /> ): (<Login />)}
-     </div>
+       </div> 
     );
   }
 }

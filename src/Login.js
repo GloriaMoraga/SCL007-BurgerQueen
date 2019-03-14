@@ -1,5 +1,8 @@
 import React, {Component} from 'react';
 import fire from './config/Fire';
+import VideoBack from './Component/VideoBack'
+import './Login.css';
+
 
 class Login extends Component {
     constructor(props){
@@ -36,6 +39,12 @@ handleChange(e) {
 
 render() {
 return (
+ <div className ="container-fluid">
+ <div className ="row">
+ <VideoBack id="background-video" loop autoPlay>
+</VideoBack>
+
+ <div className="col-md-3"></div>
     <div className="col-md-6">
         <form>
             <div className = "form-group">
@@ -51,6 +60,9 @@ return (
            <button onClick={this.signup} className="btn btn-success">Signup</button>
           </form>
          </div>
+      <div className="col-md-3"></div>
+     </div>
+    </div>
             );
 
           }
