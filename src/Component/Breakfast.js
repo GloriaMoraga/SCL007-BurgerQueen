@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {  Card, Col } from 'react-bootstrap';
+import {  Row, Card, Col } from 'react-bootstrap';
 const JSON = 
     [
     {
@@ -32,9 +32,9 @@ const JSON =
 class Breakfast extends Component {
     render(){
         return(
-          <Col md={4}  >
+        <Row>
              {Object.keys(JSON).map( key => 
-                 <Card style={{ width: '18rem' }}>
+                 <Card className="ml-2 mt-3" md={4} style={{ width: '15rem' }}>
                         <Card.Img  src={require(`${JSON[key].imagen}`)} alt="Cardcap"/>
                         <Card.Body>
                         <Card.Title>{JSON[key].name}</Card.Title>
@@ -44,7 +44,7 @@ class Breakfast extends Component {
                      </Card>
                    
                 )}
-        </Col>  
+                </Row>    
           
         )
     }

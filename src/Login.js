@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import fire from './config/Fire';
-import VideoBack from './Component/VideoBack'
+import VideoBack from './Component/VideoBack';
+import {  Container, Row, Form, Col, Button } from 'react-bootstrap';
 import './Login.css';
 
 
@@ -39,32 +40,35 @@ handleChange(e) {
 
 render() {
 return (
-    
- <div className ="container-fluid">
- <VideoBack id="background-video" loop autoPlay>
+ <div>
+<VideoBack id="background-video" loop autoPlay>
 </VideoBack>
- <div className ="row">
 
 
- <div className="col-md-3"></div>
-    <div className="col-md-6">
-        <form>
-            <div className = "form-group">
+<Container>
+    <Row class="d-flex align-items-center">
+
+        <Form className="bg-light">
+        <Form.Group controlId="formBasicEmail">
+ 
                 <label for="exampleInputEmail1">Email adress</label>
                 <input value ={this.state.email} onChange ={this.handleChange} type="email" name="email" className="form-control" id ="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" />
     
-            </div>
-           < div className="form-group">
+        </Form.Group>
+    
+        <Form.Group controlId="formBasicEmail">
+ 
            <label for="exampleInputPassword1">Password</label>
            <input value ={this.state.password} onChange ={this.handleChange} type="password" name="password" className="form-control" id ="exampleInputPassword1" placeholder="Password" />
-           </div>
-           <button type="submit" onClick={this.login} className="btn btn-primary">Ingresar</button>
-           <button onClick={this.signup} className="btn btn-success">Signup</button>
-          </form>
-         </div>
-      <div className="col-md-3"></div>
-     </div>
-    </div>
+           </Form.Group>
+           <Button type="submit" onClick={this.login} className="btn btn-primary">Ingresar</Button>
+           <Button onClick={this.signup} className="btn btn-success">Signup</Button>
+          </Form>
+    
+      </Row>
+      </Container>
+      </div>   
+   
             );
 
           }
