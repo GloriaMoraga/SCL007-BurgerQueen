@@ -32,7 +32,7 @@ const JSON =
 class Breakfast extends Component {
     render(){
         return(
-          <Col md={4} >
+          <Col md={4}  >
              {Object.keys(JSON).map( key => 
                  <Card style={{ width: '18rem' }}>
                         <Card.Img  src={require(`${JSON[key].imagen}`)} alt="Cardcap"/>

@@ -39,10 +39,12 @@ handleChange(e) {
 
 render() {
 return (
+    
  <div className ="container-fluid">
- <div className ="row">
  <VideoBack id="background-video" loop autoPlay>
 </VideoBack>
+ <div className ="row">
+
 
  <div className="col-md-3"></div>
     <div className="col-md-6">

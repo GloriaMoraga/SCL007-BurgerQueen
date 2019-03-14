@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col, Navbar} from 'react-bootstrap';
 import fire from './config/Fire';
 import NameForm from './Component/NameForm'
 import Breakfast from './Component/Breakfast'
@@ -18,21 +18,25 @@ render(){
     return(
 <Container fluid >
         
-     <NavBar>
-      <h1> Bienvenidos a Burger Queen</h1> 
-        <button onClick={this.logout} >Salir</button>
-      </NavBar>
+<Navbar bg="dark" variant="dark">
+    <Navbar.Brand href="#home">
+      <img
+        alt=""
+        src="/logo.svg"
+        width="30"
+        height="30"
+        className="d-inline-block align-top"
+      />
+      <button onClick={this.logout} >Salir</button>
+    </Navbar.Brand>
+  </Navbar>
 
-        <Container>
+  <Container>
          <Row>
-
-        
-   
-      
-         <NameForm />
+   <Col> <NameForm /></Col>     
          
-
-         <Breakfast/>
+  <Breakfast/>
+        
       
        
        
