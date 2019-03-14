@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import fire from './config/Fire';
 import VideoBack from './Component/VideoBack';
-import {  Container, Row, Form, Col, Button } from 'react-bootstrap';
+import {  Container, Row, Form, Button } from 'react-bootstrap';
 import './Login.css';
 
 

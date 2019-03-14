@@ -1,0 +1,24 @@
+ [  {
+      "name": "Café Americano",
+      "price":"$500",
+      "imagen":"./imgbreak/cafeamericano.jpg"
+    },
+    {
+      "name": "Café con Leche",
+      "price":"$700",
+      "imagen":"./imgbreak/cafeconleche.jpg"
+    },
+    {
+    
+      "name": "Sandwich jamón con queso",
+      "price":"$1000",
+      "imagen":"./imgbreak/sandwich.jpg"
+    }
+    ,
+    {
+    
+      "name": "Jugo Natural",
+      "price":"$700",
+      "imagen":"./imgbreak/Jugos.jpg"
+    }
+ ]

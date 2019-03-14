@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+// import React, { Component } from 'react';
 
-class MostrarPedido extends Component {
+// class MostrarPedido extends Component {
 
-}
+// }
 
-export default MostrarPedido;
+// export default MostrarPedido;
