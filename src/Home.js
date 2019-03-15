@@ -4,7 +4,7 @@ import fire from './config/Fire';
 import NameForm from './Component/NameForm';
 import Breakfast from './Component/Breakfast';
 import Lunch from './Component/Lunch';
-// import MostrarPedido from './Component/MostrarPedido';
+import MostrarPedido from './Component/MostrarPedido';
 
 class Home extends Component {
     constructor(props){
@@ -58,7 +58,7 @@ render(){
          
           </Col>
           <Col md={4} >
-          {/* <MostrarPedido/> */}
+          <MostrarPedido/>
           </Col>
       </Row>
  </Container>
