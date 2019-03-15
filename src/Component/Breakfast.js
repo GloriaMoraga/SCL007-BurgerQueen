@@ -29,9 +29,9 @@ class Breakfast extends Component {
     }
 
     orders.push(order);
-
-    // this.setState({orders});
-  console.log(orders)
+    this.setState({orders});
+    console.log(orders)
+ 
          
     }
 

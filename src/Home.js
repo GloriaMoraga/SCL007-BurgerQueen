@@ -53,13 +53,13 @@ render(){
        </Row>
     
       <Row>
-          <Col md={8} >
+          <Col xs={6} md={6} lg={8} >
           <div id ="breakfastIndex" style={{display: 'none'}}> <Breakfast /></div>
           <div id ="lunchIndex" style={{display: 'none'}}> <Lunch /></div>
          
           </Col>
-          <Col md={4} >
-          {/* <MostrarPedido arrayOrders={this.state.orders} total={this.state.total} updateQuantity={this.updateQuantity} removeProduct={this.removeProduct}/> */}
+          <Col xs={6} md={6} lg={4}>
+          <MostrarPedido/>
           </Col>
       </Row>
  </Container>

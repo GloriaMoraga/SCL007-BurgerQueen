@@ -48,8 +48,8 @@ return (
 
 <Container>
     <Row >
-        <Col md={4} ></Col>
-        <Col md={4}  className="back-form px-2 mt-5 rounded d-flex flex-column align-items-center justify-content-center" >
+        <Col lg={4} md={3} xs={1} ></Col>
+        <Col lg={4} md={6} xs={10} className="back-form spacing rounded d-flex flex-column align-items-center justify-content-center" >
         <img src={logo}
               width="250"
               height="auto"
@@ -72,7 +72,7 @@ return (
            <Button onClick={this.signup} className="btn btn-success">Signup</Button>
           </Form>
           </Col>
-          <Col md={4} ></Col>
+          <Col lg={4} md={3} xs={1} ></Col>
     
       </Row>
       </Container>
