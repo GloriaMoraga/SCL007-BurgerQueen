@@ -1,0 +1,92 @@
+[  {
+    "name": "Hamburguesa Simple Pollo",
+    "price":"$1500",
+    "imagen":"./imgbreak/simplepollo.jpg"
+  },
+  {
+    "name": "Hamburguesa Simple Res",
+    "price":"$1500",
+    "imagen":"./imgbreak/simpleres.jpg"
+  },
+  {
+  
+    "name": "Hamburguesa Simple Vegetariana",
+    "price":"$1500",
+    "imagen":"./imgbreak/vegetariana.jpg"
+  },
+  {
+    "name": "Hamburguesa doble Pollo",
+    "price":"$2500",
+    "imagen":"./imgbreak/doblepollo.png"
+  },
+  {
+    "name": "Hamburguesa doble Res",
+    "price":"$2500",
+    "imagen":"./imgbreak/dobleres.jpg"
+  },
+  {
+  
+    "name": "Hamburguesa doble Vegetariana",
+    "price":"$2500",
+    "imagen":"./imgbreak/vegetarianadoble.jpg"
+  }
+  ,
+  {
+  
+    "name": "Papas Fritas",
+    "price":"$500",
+    "imagen":"./imgbreak/papas.jpg"
+  }
+  ,
+  {
+  
+    "name": "Onion Rings",
+    "price":"$500",
+    "imagen":"./imgbreak/onion.jpeg"
+  } ,
+  {
+  
+    "name": "Queso adional",
+    "price":"$500",
+    "imagen":"./imgbreak/queso.jpeg"
+  } ,
+  {
+  
+    "name": "Huevo adicional",
+    "price":"$500",
+    "imagen":"./imgbreak/huevo.jpeg"
+  } ,
+  {
+  
+    "name": "Jugo Natural",
+    "price":"$700",
+    "imagen":"./imgbreak/Jugos.jpg"
+  },
+  {
+  
+    "name": "Bebida 500 ml",
+    "price":"$700",
+    "imagen":"./imgbreak/bebida.jpg"
+  }
+  ,
+  {
+  
+    "name": "Bebida 750 ml",
+    "price":"$1000",
+    "imagen":"./imgbreak/bebida750.jpeg"
+  }
+  ,
+  {
+  
+    "name": "Agua 500 ml",
+    "price":"$700",
+    "imagen":"./imgbreak/agua.jpg"
+  }
+  ,
+  {
+  
+    "name": "Agua 750 ml",
+    "price":"$1000",
+    "imagen":"./imgbreak/agua750.jpg"
+  }
+]

@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
 import {  Row, Card, Button } from 'react-bootstrap';
-import BreakData from './breakfast.json'
+import LunchData from './lunch.json'
 
 
 
-class Breakfast extends Component {
+class Lunch extends Component {
     constructor(){
         super();
         this.state = {
@@ -20,8 +20,8 @@ class Breakfast extends Component {
 
     handleSubmit(name, price){
         this.setState({
-              name,
-            price
+             "name": name,
+            "price": price
         });
 
             console.log(this.setState)
@@ -32,7 +32,7 @@ class Breakfast extends Component {
     render(){
         return(
         <Row>
-             {BreakData.map((postDetail, index) => 
+             {LunchData.map((postDetail, index) => 
                  <Card className="ml-2 mt-3" md={4} style={{ width: '14rem' }}>
                         <Card.Img  src={require(`${postDetail.imagen}`)} alt="Cardcap"/>
                         <Card.Body>
@@ -51,4 +51,4 @@ class Breakfast extends Component {
     }
 }
 
-export default Breakfast
+export default Lunch;
