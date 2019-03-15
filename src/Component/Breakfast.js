@@ -45,9 +45,9 @@ class Breakfast extends Component {
                         <Card.Body>
                         <Card.Title>{postDetail.name}</Card.Title>
                         <Card.Text>{postDetail.price}</Card.Text>
-                        <Button  onClick={()=>{
+                        <Button variant="warning" onClick={()=>{
                             this.handleSubmit(postDetail.name, 1 ,postDetail.price);
-                        }} type="submit" className="btn btn-primary">Agregar</Button>
+                        }} type="submit" >Agregar</Button>
                         </Card.Body>
                      </Card>
                    

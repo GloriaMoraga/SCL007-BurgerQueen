@@ -6,6 +6,7 @@ import NameForm from './Component/NameForm';
 import Breakfast from './Component/Breakfast';
 import Lunch from './Component/Lunch';
 import MostrarPedido from './Component/MostrarPedido';
+import './Home.css';
 
 class Home extends Component {
     constructor(props){
@@ -42,25 +43,28 @@ render(){
     </Navbar.Brand>
     </Col>
      <Col></Col>
-<Button onClick={this.breakBtn} >Desayuno</Button>
-<Button className="ml-2" onClick={this.lunchBtn}>Almuerzo</Button>
-    <Button className="ml-2" onClick={this.logout} >Salir</Button>
+<Button variant="success" onClick={this.breakBtn} >Desayuno</Button>
+<Button variant="primary" className="ml-2" onClick={this.lunchBtn}>Almuerzo</Button>
+    <Button variant="light" className="ml-2" onClick={this.logout} >Salir</Button>
     
   </Navbar>
   <Container>
-       <Row className="mt-5">
-          <NameForm  />
-       </Row>
-    
+     
       <Row>
-          <Col xs={6} md={6} lg={8} >
+          <Col xs={6} md={6} lg={6} >
+          <div className="mt-5">
+          <NameForm  /></div>
+    
+          <div className="overflow-menu" >
           <div id ="breakfastIndex" style={{display: 'none'}}> <Breakfast /></div>
           <div id ="lunchIndex" style={{display: 'none'}}> <Lunch /></div>
-         
+          </div>
           </Col>
-          <Col xs={6} md={6} lg={4}>
+          <Col className="mt-5" xs={6} md={6} lg={6}>
           <MostrarPedido/>
           </Col>
+
+          <Col lg={12} className="mt-5 mb-5"></Col>
       </Row>
  </Container>
   

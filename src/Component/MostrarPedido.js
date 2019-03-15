@@ -1,5 +1,5 @@
 import React from 'react';
-import {Table, Button} from 'react-bootstrap';
+import {Row, Col, Table, Button} from 'react-bootstrap';
 // import Breakfast from './Component/Breakfast';
 // import Lunch from './Component/Lunch';
 
@@ -8,7 +8,9 @@ import {Table, Button} from 'react-bootstrap';
 const MostrarPedido = (orders) => {
    
         return(
-            
+          <Row>
+              <Col lg= {12}><h5>Cliente:</h5></Col>
+              <Col lg= {12}>
           <Table responsive>
            <thead>
             <tr>
@@ -35,8 +37,11 @@ const MostrarPedido = (orders) => {
             </tr>
            
            </tbody>
+           
            </Table>
-      
+           <Button variant="info">Enviar a Cocina</Button>
+           </Col>
+           </Row>
         )
     }
        

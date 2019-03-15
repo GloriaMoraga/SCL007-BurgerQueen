@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {  Button } from 'react-bootstrap';
 
 
 
@@ -23,11 +24,14 @@ class NameForm extends Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
-        <label>
-          Nombre Cliente:
+        <label className= "mr-2">
+          Nombre Cliente: 
+          </label>
+
+          <label>
           <input type="text" value={this.state.value} onChange={this.handleChange} />
         </label>
-        <input type="submit" value="Submit" />
+        <Button variant="warning" className= "ml-2" type="submit" value="Submit" > Ingresar </Button>
       </form>
     );
   }
