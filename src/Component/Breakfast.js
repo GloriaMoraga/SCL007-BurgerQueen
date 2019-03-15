@@ -40,11 +40,11 @@ class Breakfast extends Component {
         return(
         <Row>
              {BreakData.map((postDetail, index) => 
-                 <Card className="ml-2 mt-3" md={4} style={{ width: '14rem' }}>
-                        <Card.Img key={1} src={require(`${postDetail.imagen}`)} alt="Cardcap"/>
+                 <Card className="ml-2 mt-3" lg={4} md={6} xs={12} style={{ width: '14rem' }}>
+                        <Card.Img  src={require(`${postDetail.imagen}`)} alt="Cardcap"/>
                         <Card.Body>
-                        <Card.Title key={2}>{postDetail.name}</Card.Title>
-                        <Card.Text key={3}>{postDetail.price}</Card.Text>
+                        <Card.Title>{postDetail.name}</Card.Title>
+                        <Card.Text>{postDetail.price}</Card.Text>
                         <Button  onClick={()=>{
                             this.handleSubmit(postDetail.name, 1 ,postDetail.price);
                         }} type="submit" className="btn btn-primary">Agregar</Button>

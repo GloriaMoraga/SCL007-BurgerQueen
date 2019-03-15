@@ -33,7 +33,7 @@ class Lunch extends Component {
         return(
         <Row>
              {LunchData.map((postDetail, index) => 
-                 <Card className="ml-2 mt-3" md={4} style={{ width: '14rem' }}>
+                 <Card className="ml-2 mt-3" lg={4} md={6} xs={12}style={{ width: '14rem' }}>
                         <Card.Img  src={require(`${postDetail.imagen}`)} alt="Cardcap"/>
                         <Card.Body>
                         <Card.Title>{postDetail.name}</Card.Title>

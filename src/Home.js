@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import { Container, Row, Col, Navbar, Button} from 'react-bootstrap';
 import fire from './config/Fire';
+import logo from './logo-bq.png';
 import NameForm from './Component/NameForm';
 import Breakfast from './Component/Breakfast';
 import Lunch from './Component/Lunch';
@@ -32,9 +33,9 @@ render(){
     <Navbar.Brand href="#home">
       <img
         alt=""
-        src="/logo.svg"
-        width="30"
-        height="30"
+        src={logo}
+        width="200"
+        height="auto"
         className="d-inline-block align-top"
       />
     

@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import fire from './config/Fire';
+import logo from './bq-logo.png';
 import VideoBack from './Component/VideoBack';
-import {  Container, Row, Form, Button } from 'react-bootstrap';
+import {  Container, Row, Form, Col, Button } from 'react-bootstrap';
 import './Login.css';
 
 
@@ -46,9 +47,15 @@ return (
 
 
 <Container>
-    <Row class="d-flex align-items-center">
+    <Row >
+        <Col md={4} ></Col>
+        <Col md={4}  className="back-form px-2 mt-5 rounded d-flex flex-column align-items-center justify-content-center" >
+        <img src={logo}
+              width="250"
+              height="auto"
+         className="App-logo" alt="logo" />
 
-        <Form className="bg-light">
+        <Form className="mb-5 ml-5 mr-5">
         <Form.Group controlId="formBasicEmail">
  
                 <label for="exampleInputEmail1">Email adress</label>
@@ -64,6 +71,8 @@ return (
            <Button type="submit" onClick={this.login} className="btn btn-primary">Ingresar</Button>
            <Button onClick={this.signup} className="btn btn-success">Signup</Button>
           </Form>
+          </Col>
+          <Col md={4} ></Col>
     
       </Row>
       </Container>
