@@ -58,7 +58,7 @@ render(){
          
           </Col>
           <Col md={4} >
-          <MostrarPedido/>
+          {/* <MostrarPedido arrayOrders={this.state.orders} total={this.state.total} updateQuantity={this.updateQuantity} removeProduct={this.removeProduct}/> */}
           </Col>
       </Row>
  </Container>
