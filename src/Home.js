@@ -1,17 +1,22 @@
 import React, {Component} from 'react';
-import { Container, Row, Col, Navbar, Button} from 'react-bootstrap';
+import { Container, Row, Col, Navbar, Button, Table} from 'react-bootstrap';
 import fire from './config/Fire';
 import logo from './logo-bq.png';
 import NameForm from './Component/NameForm';
 import Breakfast from './Component/Breakfast';
 import Lunch from './Component/Lunch';
-import MostrarPedido from './Component/MostrarPedido';
+
 import './Home.css';
 
 class Home extends Component {
     constructor(props){
         super(props);
+        this.state = {
+       
+        }
         this.logout = this.logout.bind(this);
+        this.addNote = this.addNote.bind(this);
+        this.orders = this.orders.bind(this);
      }
 logout(){
     fire.auth().signOut();
@@ -25,7 +30,25 @@ lunchBtn(){
     document.getElementById('lunchIndex').style.display="block";
     document.getElementById('breakfastIndex').style.display="none";
   }
+
+orders(nameItem, quantity, price){
+  this.setState({
+ nameItem,
+    quantity,
+   price
+  });
+  
+}
+
+addNote(name){
+this.setState({
+  name
+});
+
+  }
+
 render(){
+  
     return(
 
  <div>
@@ -53,15 +76,50 @@ render(){
       <Row>
           <Col xs={6} md={6} lg={6} >
           <div className="mt-5">
-          <NameForm  /></div>
+          <NameForm  addNote={this.addNote} /></div>
     
           <div className="overflow-menu" >
-          <div id ="breakfastIndex" style={{display: 'none'}}> <Breakfast /></div>
+          <div id ="breakfastIndex" style={{display: 'none'}}> <Breakfast onClick={this.orders} /></div>
           <div id ="lunchIndex" style={{display: 'none'}}> <Lunch /></div>
           </div>
           </Col>
           <Col className="mt-5" xs={6} md={6} lg={6}>
-          <MostrarPedido/>
+              <Row>
+              <Col lg= {12}><h5>Cliente:{ this.state.name}</h5></Col>
+              <Col lg= {12}>
+              <Table responsive>
+           <thead>
+            <tr>
+            <th>Item</th>
+            <th>Precio</th>
+            <th>Cantidad</th>
+            <th>Subtotal</th>
+              <th></th>
+            </tr>
+           </thead>
+           <tbody>
+          
+            <tr>
+            <td>{ this.state.orders}</td>
+            <td>
+            </td>
+            <td>
+                {/* <button className="btn-small" onClick={() => updateQuantity(i, -1)}><i className="material-icons">remove</i></button>{orders.quantity}
+                 
+                    
+                <Button className="btn-small" onClick={() => updateQuantity(i, 1)}><i className="material-icons">add</i></Button>*/}
+                </td> 
+            <td></td>
+            {/* <td><Button className="btn red darken-1" onClick={() => removeProduct(i)}><i className="material-icons">close</i></Button></td> */}
+            </tr>
+           
+           </tbody>
+           
+           </Table>
+           <Button variant="info">Enviar a Cocina</Button>
+           </Col>
+           </Row>
+       
           </Col>
 
           <Col lg={12} className="mt-5 mb-5"></Col>
@@ -80,6 +138,7 @@ render(){
     
     
     );
+             
 }     
 
 }

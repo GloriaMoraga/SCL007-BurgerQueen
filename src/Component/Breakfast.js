@@ -17,23 +17,22 @@ class Breakfast extends Component {
 
     }
 
-    handleSubmit(name, quantity, price){
+    handleSubmit(nameItem, quantity, price){
     const orders = this.state.orders;
     let subtotal = quantity * price;
 
     const order = {
-      name: name,
+      name: nameItem,
       quantity: quantity,
       price: price,
       subtotal: subtotal
     }
 
     orders.push(order);
-    this.setState({orders});
-    console.log(orders)
+    return(orders) 
  
-         
     }
+
 
 
     render(){

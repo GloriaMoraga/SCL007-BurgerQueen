@@ -69,7 +69,7 @@ return (
            <input value ={this.state.password} onChange ={this.handleChange} type="password" name="password" className="form-control" id ="exampleInputPassword1" placeholder="Password" />
            </Form.Group>
            <Button type="submit" onClick={this.login} className="btn btn-primary">Ingresar</Button>
-           <Button onClick={this.signup} className="btn btn-success">Signup</Button>
+           <Button onClick={this.signup} className="btn btn-success">Registrar</Button>
           </Form>
           </Col>
           <Col lg={4} md={3} xs={1} ></Col>

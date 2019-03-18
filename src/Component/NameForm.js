@@ -17,21 +17,21 @@ class NameForm extends Component {
   }
 
   handleSubmit(event) {
-    alert('A name was submitted: ' + this.state.value);
+    
+    this.props.addNote(this.state.value);
     event.preventDefault();
   }
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form >
         <label className= "mr-2">
           Nombre Cliente: 
-          </label>
-
-          <label>
+        </label>
+        <label>
           <input type="text" value={this.state.value} onChange={this.handleChange} />
         </label>
-        <Button variant="warning" className= "ml-2" type="submit" value="Submit" > Ingresar </Button>
+        <Button variant="warning" className= "ml-2" type="submit" value="Submit" onClick={this.handleSubmit} > Ingresar </Button>
       </form>
     );
   }
