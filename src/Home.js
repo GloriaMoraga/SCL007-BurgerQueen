@@ -33,6 +33,18 @@ lunchBtn(){
     document.getElementById('breakfastIndex').style.display="none";
   }
 
+sendToKitchen(){
+
+  document.getElementById('orderReady').style.display="block";
+    document.getElementById('orderTable').style.display="none";
+
+}
+
+newOrders(){
+document.getElementById('orderReady').style.display="none";
+document.getElementById('orderTable').style.display="block";
+
+}
 
 addNote(name){
 this.setState({
@@ -91,9 +103,9 @@ render(){
 
        </Col>
 
-       <Col className="mt-5" xs={6} md={6} lg={6}>
+       <Col id ="orderTable" className="mt-5" xs={6} md={6} lg={6}>
               <Row>
-              <Col lg= {12}><h5>Cliente:{this.state.name}</h5></Col>
+              <Col lg= {12}><h5>Cliente: <span className="cliente">{this.state.name}</span></h5></Col>
               <Col lg= {12}>
               <Table responsive>
            <thead>
@@ -116,10 +128,15 @@ render(){
            </tbody>
            
            </Table>
-           <Button variant="info">Enviar a Cocina</Button>
+           <Button onClick={this.sendToKitchen} variant="info">Enviar a Cocina</Button>
            </Col>
            </Row>
        
+          </Col>
+          <Col id ="orderReady" className="mt-5" xs={6} md={6} lg={6} style={{display: 'none'}}>
+           <h3>Estimado <span className="cliente">{this.state.name}</span> su pedido esta siendo preparado.</h3>
+           <Button onClick={this.newOrders} variant="info">Ingresar Nuevo Pedido</Button>
+          
           </Col>
 
           <Col lg={12} className="mt-5 mb-5"></Col>
