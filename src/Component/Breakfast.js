@@ -8,22 +8,23 @@ class Breakfast extends Component {
     constructor(){
         super();
         this.state = {
-            item:'',
-            price:''
+           orders:[]
         }
          this.handleSubmit = this.handleSubmit.bind(this);
 }
 
  handleSubmit(nameItem, price){
+    const orders = this.state.orders;
+  
+    const order = {
+      item: nameItem,
+      price: price
+    }
+
+    orders.push(order);
+    this.props.addOrders(this.state.orders);
 
 
-    this.setState({
-          item: nameItem,
-          price:price
-        });
-this.props.addOrders(this.state.item,this.state.price);
-
- console.log(nameItem, price)
     }
 
 

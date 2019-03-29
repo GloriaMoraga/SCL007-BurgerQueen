@@ -11,8 +11,8 @@ import './Home.css';
 class Home extends Component {
     constructor(props){
         super(props);
-        this.state = {
-       
+        this.state= {
+          orders:[]
         }
         this.logout = this.logout.bind(this);
         this.addNote = this.addNote.bind(this);
@@ -41,11 +41,11 @@ this.setState({
 
   }
 
-addOrders(nameItem, price){
+addOrders(orders){
 this.setState({
-  nameItem, price
+  orders
 });
-console.log(nameItem, price)
+
 }  
 
 
@@ -72,21 +72,26 @@ render(){
 <Button variant="primary" className="ml-2" onClick={this.lunchBtn}>Almuerzo</Button>
 <Button variant="light" className="ml-2" onClick={this.logout} >Salir</Button>
     
-  </Navbar>
+</Navbar>
   <Container>
      
       <Row>
-          <Col xs={6} md={6} lg={6} >
+      <Col xs={6} md={6} lg={6} >
           <div className="mt-5">
           <NameForm  addNote={this.addNote} /></div>
     
           <div className="overflow-menu" >
-          <div id ="breakfastIndex" style={{display: 'none'}}> 
-            <Breakfast addOrders={this.addOrders}/></div>
-          <div id ="lunchIndex" style={{display: 'none'}}> <Lunch /></div>
-          </div>
-          </Col>
-          <Col className="mt-5" xs={6} md={6} lg={6}>
+            <div id ="breakfastIndex" style={{display: 'none'}}> 
+             <Breakfast addOrders={this.addOrders}/>
+            </div>
+            <div id ="lunchIndex" style={{display: 'none'}}> 
+            <Lunch addOrders={this.addOrders} />
+            </div>
+            </div>
+
+       </Col>
+
+       <Col className="mt-5" xs={6} md={6} lg={6}>
               <Row>
               <Col lg= {12}><h5>Cliente:{this.state.name}</h5></Col>
               <Col lg= {12}>
@@ -100,11 +105,13 @@ render(){
             </tr>
            </thead>
            <tbody>
-          
-            <tr>
-            <td>{this.state.nameItem}</td>
-            <td>{this.state.price}</td>
-             </tr>
+           {this.state.orders.map((order, index) =>
+                  <tr key={index}>
+                   
+                    <td>{order.item}</td>
+                    <td>{order.price}</td>
+                  </tr>
+                )}
            
            </tbody>
            
@@ -118,8 +125,7 @@ render(){
           <Col lg={12} className="mt-5 mb-5"></Col>
       </Row>
  </Container>
-  
-        </div>  
+ </div>  
     );
              
 }     

@@ -8,25 +8,25 @@ class Lunch extends Component {
     constructor(){
         super();
         this.state = {
-            "name": '',
-            "price": ''
+           orders:[]
         }
          this.handleSubmit = this.handleSubmit.bind(this);
+}
 
-        
-       
+ handleSubmit(nameItem, price){
+    const orders = this.state.orders;
+  
+    const order = {
+      item: nameItem,
+      price: price
+    }
+
+    orders.push(order);
+    this.props.addOrders(this.state.orders);
+
 
     }
 
-    handleSubmit(name, price){
-        this.setState({
-             "name": name,
-            "price": price
-        });
-
-            console.log(this.setState)
-        
-    }
 
 
     render(){
