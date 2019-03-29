@@ -1,23 +1,23 @@
 self.__precacheManifest = [
   {
-    "revision": "4476216fd5a22e97580f",
-    "url": "/static/css/main.7857304c.chunk.css"
+    "revision": "c851c28d0e1891f5e3be",
+    "url": "/static/css/main.3d81d254.chunk.css"
   },
   {
-    "revision": "4476216fd5a22e97580f",
-    "url": "/static/js/main.4476216f.chunk.js"
+    "revision": "c851c28d0e1891f5e3be",
+    "url": "/static/js/main.c851c28d.chunk.js"
   },
   {
     "revision": "fdfcfda2d9b1bf31db52",
     "url": "/static/js/runtime~main.fdfcfda2.js"
   },
   {
-    "revision": "96a83d6b1604ae432b44",
+    "revision": "040ee3f0301449814d1c",
     "url": "/static/css/2.b91d7480.chunk.css"
   },
   {
-    "revision": "96a83d6b1604ae432b44",
-    "url": "/static/js/2.96a83d6b.chunk.js"
+    "revision": "040ee3f0301449814d1c",
+    "url": "/static/js/2.040ee3f0.chunk.js"
   },
   {
     "revision": "05cfe56c153922331b2ca308ad27bc24",
@@ -96,7 +96,7 @@ self.__precacheManifest = [
     "url": "/static/media/vegetarianadoble.271a5d21.jpg"
   },
   {
-    "revision": "725214c529d59a59d83840a362a69905",
+    "revision": "abb4d6b32288d608c47bd952c0e16014",
     "url": "/index.html"
   }
 ];

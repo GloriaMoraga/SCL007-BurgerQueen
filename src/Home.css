@@ -8,3 +8,7 @@ overflow-x:hidden;
     font-size: 24px;
     color: #ee6f0e;
 }
+
+.btn-delete{
+   color: red;
+}

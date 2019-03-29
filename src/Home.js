@@ -60,7 +60,11 @@ this.setState({
 
 }  
 
-
+removeRow = (event, index) => {
+        event.preventDefault();
+        this.state.orders.splice(index, 1);
+        this.setState({tr: this.state.orders});
+    }
 
 render(){
  return(
@@ -122,6 +126,7 @@ render(){
                    
                     <td>{order.item}</td>
                     <td>{order.price}</td>
+                    <td><Button variant="light" onClick={(event) => this.removeRow(event, index)}><i className="fas fa-trash-alt btn-delete"></i></Button></td>
                   </tr>
                 )}
            
