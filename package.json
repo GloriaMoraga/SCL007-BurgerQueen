@@ -4,11 +4,11 @@
   "private": true,
   "dependencies": {
     "@material-ui/core": "^3.9.2",
-    "bootstrap": "^4.3.1",
     "firebase": "^5.8.6",
     "react": "^16.8.3",
     "react-bootstrap": "^1.0.0-beta.5",
     "react-dom": "^16.8.3",
+    "react-router-dom": "^5.0.0",
     "react-scripts": "2.1.5"
   },
   "scripts": {
@@ -28,7 +28,9 @@
   ],
   "description": "## Preámbulo",
   "main": "index.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "bootstrap": "^4.3.1"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/GloriaMoraga/SCL007-BurgerQueen.git"
